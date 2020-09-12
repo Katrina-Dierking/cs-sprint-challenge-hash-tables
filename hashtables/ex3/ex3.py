@@ -1,8 +1,25 @@
+"""
+    * create a list of lists with integers
+    * find the intersection  
+"""
+
+
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    cache = {}
+    result = []
+    
+    for array in arrays:
+        for num in array:
+            key = num
+            if key not in cache:
+                cache[key] = 1
+            else: 
+                cache[key] +=1
+    
+    for x in cache:
+        if cache[x] > 1:
+            result.append(x)
+                
 
     return result
 
