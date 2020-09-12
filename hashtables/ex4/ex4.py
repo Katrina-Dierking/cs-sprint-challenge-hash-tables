@@ -1,8 +1,19 @@
+"""
+* set dict and list
+* loop through list
+"""
+
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    nums = {}
+    result = []
+    
+    for i in a:
+        #if absolute value of nums exists, add it to the list
+        if abs(i) in nums:
+            result.append(abs(i))
+        #if not, add it to the dict
+        else:
+            nums[abs(i)] = 1
 
     return result
 
